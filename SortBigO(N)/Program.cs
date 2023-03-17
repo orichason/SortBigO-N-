@@ -14,20 +14,19 @@ namespace SortBigO_N_
         {
             int[] result = new int[nums.Length];
 
-            int longestDigit = 0;
+            //int longestDigit = 0;
             
             
-            for (int i = 0; i < nums.Length; i++)
-            {
-                int currentLongestDigit = nums[i].ToString().Length;
+            //for (int i = 0; i < nums.Length; i++)
+            //{
+            //    int currentLongestDigit = nums[i].ToString().Length;
 
-                if(currentLongestDigit > longestDigit)
-                {
-                   longestDigit = currentLongestDigit;
-                }
-            }
+            //    if(currentLongestDigit > longestDigit)
+            //    {
+            //       longestDigit = currentLongestDigit;
+            //    }
+            //}
 
-            //for(int z = longestDigit; longestDigit >)
             for (int i = 0, count = 0; i < 10; i++)
             {
                 for(int j = 0; j < nums.Length; j++)
@@ -88,8 +87,7 @@ namespace SortBigO_N_
             }
 
             nums = Sort(nums);
-
-            ;
+            
         }
     }
 }
