@@ -74,13 +74,9 @@ namespace SortBigO_N_
                 nums[i] = random.Next(1, 100);
             }
 
-            int[] test = new int[] { 170, 45, 75, 90, 802, 24, 2, 66 };
-
             nums = RadixSort(nums);
 
-           // test = RadixSort(test);
-
-            ;
+         
         }
     }
 }
