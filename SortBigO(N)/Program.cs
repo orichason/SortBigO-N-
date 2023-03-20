@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -31,7 +32,7 @@ namespace SortBigO_N_
             {
                 MiniSort(nums, i);
             }
-
+            
             return nums;
         }
         static int[] MiniSort(int[] nums, int exponent)
@@ -51,8 +52,9 @@ namespace SortBigO_N_
 
             for(int i = nums.Length - 1; i >= 0; i--)
             {
-                sortArray[(nums[i] / exponent) % 10]--;
-                result[sortArray[(nums[i] / exponent) % 10]] = nums[i];
+                int temp = (nums[i] / exponent) % 10;
+                sortArray[temp]--;
+                result[sortArray[temp]] = nums[i];
                 
             }
 
@@ -71,7 +73,7 @@ namespace SortBigO_N_
 
             for(int i = 0; i < nums.Length; i++)
             {
-                nums[i] = random.Next(1, 100);
+                nums[i] = random.Next(1, 99);
             }
 
             nums = RadixSort(nums);
